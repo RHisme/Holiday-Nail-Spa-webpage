@@ -260,8 +260,7 @@
 .body .salonStaff .staffContainer .staffItem {
   display: flex;
   flex-direction: column;
-  max-width: 100em;
-  min-width: 90em;
+  width: 100em;
   background-color: white;
   border: 1px solid var(--greyText);
   border-radius: 8px;
