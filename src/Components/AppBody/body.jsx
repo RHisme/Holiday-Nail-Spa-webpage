@@ -31,8 +31,8 @@ const serviceCategories = [
         services: [
             { 
                 name: "Manicure", 
-                price: "25", 
-                discountPrice: "20", 
+                price: "$25", 
+                discountPrice: "$20", 
                 isDiscounted: true, 
                 isFixedPrice: true, 
                 duration: "45 mins", 
@@ -40,7 +40,7 @@ const serviceCategories = [
             },
             { 
                 name: "Pedicure", 
-                price: "30", 
+                price: "$30", 
                 isDiscounted: false, 
                 isFixedPrice: false, 
                 duration: "60 mins", 
@@ -48,8 +48,8 @@ const serviceCategories = [
             },
             { 
                 name: "Acrylic Nails", 
-                price: "50", 
-                discountPrice: "45", 
+                price: "$50", 
+                discountPrice: "$45", 
                 isDiscounted: true, 
                 isFixedPrice: true, 
                 duration: "90 mins", 
@@ -57,7 +57,7 @@ const serviceCategories = [
             },
             { 
                 name: "Shellac", 
-                price: "40", 
+                price: "$40", 
                 isDiscounted: false, 
                 isFixedPrice: true, 
                 duration: "60 mins", 
@@ -65,7 +65,7 @@ const serviceCategories = [
             },
             { 
                 name: "Nail Art", 
-                price: "20", 
+                price: "$20", 
                 isDiscounted: false, 
                 isFixedPrice: false, 
                 duration: "30 mins", 
@@ -78,7 +78,7 @@ const serviceCategories = [
         services: [
             { 
                 name: "Classic Pedicure", 
-                price: "35", 
+                price: "$35", 
                 isDiscounted: false, 
                 isFixedPrice: true, 
                 duration: "50 mins", 
@@ -86,8 +86,8 @@ const serviceCategories = [
             },
             { 
                 name: "Spa Pedicure", 
-                price: "50", 
-                discountPrice: "45", 
+                price: "$50", 
+                discountPrice: "$45", 
                 isDiscounted: true, 
                 isFixedPrice: true, 
                 duration: "70 mins", 
@@ -95,7 +95,7 @@ const serviceCategories = [
             },
             { 
                 name: "Gel Pedicure", 
-                price: "45", 
+                price: "$45", 
                 isDiscounted: false, 
                 isFixedPrice: false, 
                 duration: "60 mins", 
@@ -108,8 +108,8 @@ const serviceCategories = [
         services: [
             { 
                 name: "Facials", 
-                price: "70", 
-                discountPrice: "60", 
+                price: "$70", 
+                discountPrice: "$60", 
                 isDiscounted: true, 
                 isFixedPrice: true, 
                 duration: "60 mins", 
@@ -117,7 +117,7 @@ const serviceCategories = [
             },
             { 
                 name: "Skin Treatments", 
-                price: "80", 
+                price: "$80", 
                 isDiscounted: false, 
                 isFixedPrice: true, 
                 duration: "75 mins", 
@@ -130,8 +130,8 @@ const serviceCategories = [
         services: [
             { 
                 name: "Classic Extensions", 
-                price: "100", 
-                discountPrice: "90", 
+                price: "$100", 
+                discountPrice: "$90", 
                 isDiscounted: true, 
                 isFixedPrice: true, 
                 duration: "90 mins", 
@@ -139,7 +139,7 @@ const serviceCategories = [
             },
             { 
                 name: "Volume Extensions", 
-                price: "150", 
+                price: "$150", 
                 isDiscounted: false, 
                 isFixedPrice: true, 
                 duration: "120 mins", 
@@ -147,10 +147,10 @@ const serviceCategories = [
             },
             { 
                 name: "Hybrid Extensions", 
-                price: "130", 
+                price: "$130", 
                 isDiscounted: false, 
                 isFixedPrice: false, 
-                duration: "105 mins", 
+                duration: "$105 mins", 
                 description: "Mix of classic and volume lashes." 
             }
         ]
@@ -160,8 +160,8 @@ const serviceCategories = [
         services: [
             { 
                 name: "Leg Waxing", 
-                price: "40", 
-                discountPrice: "35", 
+                price: "$40", 
+                discountPrice: "$35", 
                 isDiscounted: true, 
                 isFixedPrice: false, 
                 duration: "30 mins", 
@@ -169,7 +169,7 @@ const serviceCategories = [
             },
             { 
                 name: "Bikini Waxing", 
-                price: "25", 
+                price: "$25", 
                 isDiscounted: false, 
                 isFixedPrice: true, 
                 duration: "20 mins", 
@@ -177,7 +177,7 @@ const serviceCategories = [
             },
             { 
                 name: "Facial Waxing", 
-                price: "15", 
+                price: "$15", 
                 isDiscounted: false, 
                 isFixedPrice: true, 
                 duration: "15 mins", 
@@ -190,7 +190,7 @@ const serviceCategories = [
         services: [
             { 
                 name: "Nail Art", 
-                price: "15", 
+                price: "$15", 
                 isDiscounted: false, 
                 isFixedPrice: false, 
                 duration: "20 mins", 
@@ -198,7 +198,7 @@ const serviceCategories = [
             },
             { 
                 name: "Paraffin Treatment", 
-                price: "25", 
+                price: "$25", 
                 isDiscounted: false, 
                 isFixedPrice: true, 
                 duration: "30 mins", 
@@ -206,7 +206,7 @@ const serviceCategories = [
             },
             { 
                 name: "Gel Removal", 
-                price: "15", 
+                price: "$15", 
                 isDiscounted: false, 
                 isFixedPrice: true, 
                 duration: "15 mins", 
@@ -504,7 +504,7 @@ const Body = () => {
                                             <div className='normal'>
                                                 <text className='orignal'>{service.price}</text>
                                                 <text style={{ marginLeft: '5px' }} className='type'>
-                                                    {service.isFixedPrice ? 'Fixed' : 'From'}
+                                                    {service.isFixedPrice ? 'fixed' : 'from'}
                                                 </text>
                                             </div>
                                         )}
