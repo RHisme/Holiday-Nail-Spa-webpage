@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+ *{
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; 
+
+}
+
+:root {
+    --PrimaryColor: hsl(199, 100%, 33%); 
+    --SecondaryColor: hsl(187, 85%, 43%); 
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%)); 
+    --whiteColor: hsl(0,0%,100%); 
+    --blackColor: hsl(201, 33%, 16%); 
+    --textColor: hsl(240, 4%, 36%); 
+    --whiteColorDeam: hsl(0, 0%, 93%); 
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246); 
+    --cardBG: rgb(225, 225, 225);
+}
+.app {
+    display: flex;
+    flex-direction: column;
+}
+
+.Header{
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--inputColor);
+    position: fixed;
+    display: flex;
+    background-color: var(--whiteColor);
+    width: 100%; 
+    z-index: 1000;
+    padding-left: 1rem;
+
+    
+}
+
+.Content{
+    flex-grow: 1;
+    min-height: 600px;
+    margin-top: 10px;
+    background-color: var(--whiteColor);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1.5rem;   
+    padding-right: 1.5rem;
+    
+
+}
+
+.Footer{
+    background-color: var(--inputColor);
+    padding: 1rem;
+    width: 100%; 
+    text-align: center;
+    color: var(--SecondaryColor);
+    font-weight: 700;
+    font-size: 1rem;
+    position: relative; 
+}
+a {
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.section{ 
+    padding: 4rem 0 2 rem; 
+}
+
+.icon{
+    font-size: 2.3rem;
+    cursor: pointer;
+    color: var(--SecondaryColor)
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: .6rem 1.5rem; 
+    height: max-content;
+    background-color: var(--SecondaryColor) ;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: .6rem 1.5rem; 
+    height: max-content;
+    background-color: var(--whiteColor) ;
+    color: var(--PrimaryColor);
+    font-weight: 700;
+    font-size: 1rem;
+    border-radius: 3rem;
+    border: 1px solid var(--PrimaryColor);
+    outline: none;
+    cursor: pointer;
+}
+
+.btn3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: .6rem 1.5rem; 
+    height: max-content;
+    background-color: var(--whiteColor) ;
+    color: black;
+    font-weight: 300;
+    font-size: 1rem;
+    border-radius: 3rem;
+    border: 1px solid var(--greyText);
+    outline: none;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--blackColor);
+}
+
+.btn2:hover{
+    background-color: var(--blackColor);
+    color: white;
+}
+
+.btn3:hover{
+    background-color: var(--blackColor);
+    color: white;
+}
+
+.input{
+    font-size: 100%;
+}
+
+
