@@ -352,7 +352,7 @@ const Body = () => {
                 </Carousel>
 
                 <button
-                className='btn2'
+                className='btn4'
                 onClick={navigateToGallery}
                 style={{
                    width:'10rem',

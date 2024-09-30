@@ -138,6 +138,18 @@ li{
     cursor: pointer;
 }
 
+.btn4{
+    display: flex;
+    color: var(--SecondaryColor);
+    text-decoration: underline;
+    background-color: white;
+    border: none;
+    font-size: 1.2rem;
+    margin: 0;
+    width: fit-content !important;
+}
+
+
 .btn:hover{
     background-color: var(--blackColor);
 }
@@ -150,6 +162,11 @@ li{
 .btn3:hover{
     background-color: var(--blackColor);
     color: white;
+}
+
+.btn4:hover{
+    color: var(--blackColor);
+    
 }
 
 .input{
