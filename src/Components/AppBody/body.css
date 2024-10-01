@@ -219,19 +219,11 @@
 .body .salonServices .servicesContainer .serviceList .servicesGrid .serviceItem .price .normal {
   display: flex;
   align-items: center;
-  gap: 7px;
-}
-.body .salonServices .servicesContainer .serviceList .servicesGrid .serviceItem .price .normal .orignal {
-  display: flex;
-  justify-content: center;
   background-color: var(--ThirdColor);
-  width: 30px;
   padding: 5px;
   border-radius: 15px;
-  width: 3rem;
-}
-.body .salonServices .servicesContainer .serviceList .servicesGrid .serviceItem .price .normal .type {
-  font-weight: 700 bold;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 .body .salonServices .servicesContainer .serviceList .servicesGrid .serviceItem:hover {
   background-color: var(--inputColor);

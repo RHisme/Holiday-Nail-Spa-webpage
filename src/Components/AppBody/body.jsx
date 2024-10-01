@@ -352,7 +352,7 @@ const Body = () => {
                 </Carousel>
 
                 <button
-                className='btn4'
+                className='btn2'
                 onClick={navigateToGallery}
                 style={{
                    width:'10rem',
@@ -503,8 +503,8 @@ const Body = () => {
                                         ) : (
                                             <div className='normal'>
                                                 <text className='orignal'>{service.price}</text>
-                                                <text style={{ marginLeft: '5px' }} className='type'>
-                                                    {service.isFixedPrice ? 'fixed' : 'from'}
+                                                <text className='type'>
+                                                    {service.isFixedPrice ? '' : '+'}
                                                 </text>
                                             </div>
                                         )}

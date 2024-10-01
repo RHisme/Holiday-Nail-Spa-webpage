@@ -261,21 +261,12 @@
                             .normal{
                                 display: flex;
                                 align-items: center;
-                                gap: 7px;
-
-                                .orignal{
-                                    display: flex;
-                                    justify-content: center;
-                                    background-color: var(--ThirdColor);
-                                    width: 30px;
-                                    padding: 5px;
-                                    border-radius: 15px;
-                                    width: 3rem;
-                                }
-
-                                .type{
-                                    font-weight: 700 bold;
-                                }
+                                background-color: var(--ThirdColor);
+                                padding: 5px;
+                                border-radius: 15px;
+                                padding-left: 10px;
+                                padding-right: 10px;
+                               
                             }
                         }
 
