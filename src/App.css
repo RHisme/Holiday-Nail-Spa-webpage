@@ -153,7 +153,7 @@ li{
 .btn5{
     background-color: transparent;
     border: none;
-    color: black;
+    color: var(--SecondaryColor);
     text-decoration: underline;
     cursor: pointer;
     padding-left: 5px;
@@ -179,7 +179,7 @@ li{
 }
 
 .btn5:hover{
-    color: red;
+    color: black;
     background-color: transparent;
     
 }
