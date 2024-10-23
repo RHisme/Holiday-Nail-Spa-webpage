@@ -36,7 +36,7 @@ const serviceCategories = [
                 isDiscounted: true, 
                 isFixedPrice: true, 
                 duration: "45 mins", 
-                description: "Classic manicure with nail shaping and polish." 
+                description: "Classic manicure with nail shaping and polish. Begin with a soothing soak in warm, aromatic water to soften the skin, followed by meticulous nail shaping and gentle cuticle care. Our expert nail technicians will then exfoliate your hands, removing dead skin cells and revealing smoother, healthier skin." 
             },
             { 
                 name: "Pedicure", 
@@ -301,6 +301,14 @@ const Body = () => {
         setActiveCategory(activeCategory === index ? null : index);
   };
 
+
+  //Toggle service description content
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  const toggleDescription = () => {
+      setIsExpanded(prevState => !prevState); // Đảo ngược trạng thái
+  };
+  
   // Create a ref for the gallery section
   const galleryRef = useRef(null);
 
@@ -352,7 +360,7 @@ const Body = () => {
                 </Carousel>
 
                 <button
-                className='btn2'
+                className='btn4'
                 onClick={navigateToGallery}
                 style={{
                    width:'10rem',
@@ -450,7 +458,7 @@ const Body = () => {
 
         <div className="aboutUs">
             <h1 className="title">
-                About US
+                About us
             </h1>
             <Flex gap= '10px 4px' className='serviceCategories'>
                 <Tag color='magenta' className='tag'> Nails </Tag>
@@ -487,32 +495,67 @@ const Body = () => {
                                         alignItems: 'center',
                                         justifyContent: 'space-between'
                                     }}>
-                                        <h3 className='name'>{service.name}</h3>
+                                        <h3 className='serviceTitle'>
+                                            {service.name} - <span className='duration'>{service.duration}</span>
+                                        </h3>
+                                        
+                                    </div>
+
+                                    <div className='descriptionContent'>
+                                        <p className={isExpanded ? 'fullDescription' : 'description'}>
+                                            {isExpanded 
+                                                ? service.description 
+                                                : (service.description.length > 200 
+                                                    ? service.description.slice(0, 190) + '...' 
+                                                    : service.description) // Không thêm dấu "..." nếu ngắn hơn 100 ký tự
+                                            }
+                                            {service.description.length > 200 && !isExpanded && (
+                                                <button onClick={toggleDescription} className="btn5">
+                                                    See More
+                                                </button>
+                                            )}
+                                            {service.description.length > 200 && isExpanded && (
+                                                <button onClick={toggleDescription} className="btn5">
+                                                    See Less
+                                                </button>
+                                            )}
+                                        </p>
+                                    </div>
+
+
+
+                                    <div 
+                                    style={{
+                                        display:"flex",
+                                        alignItems: "center", 
+                                        justifyContent: "space-between",
+                                        marginTop: "10px"
+                                    }}>
+                                        {/* Price */}
+                                        <h3 className='price'>
+                                            {/* Nếu dịch vụ có giảm giá */}
+                                            {service.isDiscounted ? (
+                                                <div className='discounted'>
+                                                    <text className='new'>{service.discountPrice}</text>
+                                                    <text className='orignal'>
+                                                        {service.price}
+                                                    </text>
+                                                </div>
+                                            ) : (
+                                                <div className='normal'>
+                                                    <text className='orignal'>{service.price}</text>
+                                                    <text className='type'>
+                                                        {service.isFixedPrice ? '' : '+'}
+                                                    </text>
+                                                </div>
+                                            )}
+                                        </h3>
+
                                         <button className='btn3'> Book Now </button>
                                     </div>
+                                    
 
-                                    <div className='price'>
-                                        {/* Nếu dịch vụ có giảm giá */}
-                                        {service.isDiscounted ? (
-                                            <div className='discounted'>
-                                                <text className='new'>{service.discountPrice}</text>
-                                                <text className='orignal'>
-                                                    {service.price}
-                                                </text>
-                                            </div>
-                                        ) : (
-                                            <div className='normal'>
-                                                <text className='orignal'>{service.price}</text>
-                                                <text className='type'>
-                                                    {service.isFixedPrice ? '' : '+'}
-                                                </text>
-                                            </div>
-                                        )}
-                                    </div>
-
-                                    <p className='description'>
-                                        {service.description} - {service.duration}
-                                    </p>
+                                    
                                 </div>
                             ))}
                         </div>
@@ -525,7 +568,7 @@ const Body = () => {
 
 
         <div className="salonStaff">
-            <h1 className='title'> Staff </h1>;
+            <h1 className='title'> Staffs </h1>;
             
            
             <div className="staffContainer">

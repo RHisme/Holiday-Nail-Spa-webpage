@@ -227,10 +227,11 @@
                         
 
 
-                        .name{
-                            font-weight: 700; 
-                            font-size: 1.2rem o !important;
-                        }
+                       .serviceTitle{
+                            .duration{
+                                font-weight: 500;
+                            }
+                       }
 
                         .price{
                             display: flex;
@@ -268,8 +269,31 @@
                                 padding-right: 10px;
                                
                             }
+                            
+                        
                         }
 
+                        .descriptionContent{
+                            display: flex;
+                            flex-direction: column;
+                            gap: 5px;
+                            position: relative;
+                            margin-top:10px;
+
+
+                             .description{
+                                display: -webkit-box;
+                                line-clamp: 2; /* Giới hạn hiển thị 2 dòng */
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+
+                             }
+
+                             .fullDescription {
+                                display: block; /* show full content */
+                              }
+                        }
             
                     }
 

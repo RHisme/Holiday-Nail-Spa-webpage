@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --PrimaryColor: hsl(199, 100%, 33%);
   --SecondaryColor: hsl(187, 85%, 43%);
@@ -188,9 +189,8 @@
   cursor: pointer;
   font-size: 1rem;
 }
-.body .salonServices .servicesContainer .serviceList .servicesGrid .serviceItem .name {
-  font-weight: 700;
-  font-size: 1.2rem o !important;
+.body .salonServices .servicesContainer .serviceList .servicesGrid .serviceItem .serviceTitle .duration {
+  font-weight: 500;
 }
 .body .salonServices .servicesContainer .serviceList .servicesGrid .serviceItem .price {
   display: flex;
@@ -224,6 +224,23 @@
   border-radius: 15px;
   padding-left: 10px;
   padding-right: 10px;
+}
+.body .salonServices .servicesContainer .serviceList .servicesGrid .serviceItem .descriptionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  margin-top: 10px;
+}
+.body .salonServices .servicesContainer .serviceList .servicesGrid .serviceItem .descriptionContent .description {
+  display: -webkit-box;
+  line-clamp: 2; /* Giới hạn hiển thị 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.body .salonServices .servicesContainer .serviceList .servicesGrid .serviceItem .descriptionContent .fullDescription {
+  display: block; /* show full content */
 }
 .body .salonServices .servicesContainer .serviceList .servicesGrid .serviceItem:hover {
   background-color: var(--inputColor);
