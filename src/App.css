@@ -157,7 +157,7 @@ li{
     text-decoration: underline;
     cursor: pointer;
     padding-left: 5px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
 }
 .btn:hover{
     background-color: var(--blackColor);
