@@ -44,7 +44,7 @@
             
             .image{
                 width: 100%; 
-                object-fit: fit;
+                object-fit: cover;
                 height: 35rem; 
                 border-radius: 12px;
             }
@@ -182,7 +182,6 @@
                 gap: 15px;
 
                 .category{
-                    min-width: 20rem;
                     max-width: 24rem;
                     display: flex;
                     align-items: flex-start;
@@ -194,7 +193,6 @@
                     margin-bottom: 10px;
                     font-size: 1rem;
                     border-bottom: 10px solid var(white);
-                    font-size: 1.2rem;
 
 
                 }
@@ -285,6 +283,7 @@
                             gap: 5px;
                             position: relative;
                             margin-top:10px;
+                            color: var(--greyText);
 
 
                              .description{

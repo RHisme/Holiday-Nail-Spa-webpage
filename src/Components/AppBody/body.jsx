@@ -387,10 +387,10 @@ const Body = () => {
             <div style={{display:'flex',flexDirection:'column', alignItems:'flex-end'}}>
                 <Carousel
                     responsive={responsiveForIntroCarousel}
+                    autoPlay={true}
+                    infinite={true}
                     showDots={true}
-                    infinite={true} // Enable infinite loop
-                    autoplay={true} // Enable autoplay
-                    autoplaySpeed={3000} // Duration of autoplay (in milliseconds)
+                    autoPlaySpeed={3000} // Duration of autoplay (in milliseconds)
                     arrows={true} // Show navigation arrows
                     className='carousel'
                 >
