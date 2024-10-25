@@ -290,6 +290,12 @@ const staffMembers = [
         rating: 4.9,
         image: "https://channel.mediacdn.vn/prupload/156/2017/12/img20171211150727637.jpg"
     },
+    {
+        name: "David Ngo",
+        position: "Pedicure Specialist",
+        rating: 4.5,
+        image: "https://img.freepik.com/free-photo/young-male-posing-isolated-against-blank-studio-wall_273609-12356.jpg"
+    },
     // Add more staff members as needed
 ];
 
@@ -628,11 +634,11 @@ const Body = () => {
            
             <Carousel 
                 responsive={responsiveForStaffCarousel} 
-                infinite={true} 
+                infinite={false} 
                 arrows={true}
                 autoPlaySpeed={3000}
                 showDots={true}
-                autoPlay={true}
+                autoPlay={false}
                 className='staffContainer'
                 >
                 {staffMembers.map((staff) => (
@@ -666,8 +672,8 @@ const Body = () => {
             </div>
             <Carousel
                 responsive={responsiveForReviewCarousel}
-                infinite={true}
-                autoPlay={true}
+                infinite={false}
+                autoPlay={false}
                 autoPlaySpeed={3000}
                 showDots={true}
                 className='reviewsContainer'
