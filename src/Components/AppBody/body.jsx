@@ -1,13 +1,67 @@
 import React, { useState, useRef } from 'react';
 import './body.css';
-import { Carousel, Rate, Button, Collapse, Image, Flex, Tag, Col, Row} from "antd";
+import {Rate, Button, Collapse, Image, Flex, Tag, Col, Row} from "antd";
+
+//Icons
 import { FiPhone, FiPhoneCall } from "react-icons/fi";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoPencilSharp } from "react-icons/io5";
 import { CiHeart } from "react-icons/ci";
 import { FaShare } from "react-icons/fa";
-
 import { ClockCircleOutlined } from '@ant-design/icons';
+import { SlLike } from "react-icons/sl";
+import { IoMdShare } from "react-icons/io";
+
+
+
+//Carousel
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css'; // Import styles for React Multi Carousel
+
+const responsiveForIntroCarousel = {
+    superLarge: {
+        breakpoint: { max: 4000, min: 1024 },
+        items: 1, // Show 1 item for large screens
+    },
+    large: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 1, // Show 1 item for medium screens
+    },
+    medium: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1, // Show 1 item for small screens
+    },
+};
+
+const responsiveForStaffCarousel = {
+    superLarge: {
+        breakpoint: { max: 4000, min: 1024 },
+        items: 3,
+    },
+    large: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2,
+    },
+    medium: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1,
+    },
+};
+
+const responsiveForReviewCarousel = {
+    superLarge: {
+        breakpoint: { max: 4000, min: 1024 },
+        items: 3,
+    },
+    large: {
+        breakpoint: { max: 1024, min: 464 },
+        items: 2,
+    },
+    medium: {
+        breakpoint: { max: 464, min: 0 },
+        items: 1,
+    },
+};
 
 const hoursOfOperation = [
     { day: 'Sunday', hours: '11am - 6pm' },
@@ -219,20 +273,20 @@ const serviceCategories = [
 
 const staffMembers = [
     {
-        name: "Jane Doe",
-        introduction: "Expert in nail art and customer service.",
+        name: "RoyHoang",
+        position: "Nail Technician",
         rating: 4.8,
         image: "https://htmediagroup.vn/wp-content/uploads/2022/04/Anh-CV-2_avatar-min.jpg"
     },
     {
         name: "John Smith",
-        introduction: "Specializes in eyelash extensions and facials.",
+        position: "Acrylic Specialist",
         rating: 4.6,
         image: "https://htmediagroup.vn/wp-content/uploads/2022/11/Anh-giam-doc-nam-01-min.jpg"
     },
     {
         name: "Emily Johnson",
-        introduction: "Professional waxing and skincare expert.",
+        position: "Pedicure Specialist",
         rating: 4.9,
         image: "https://channel.mediacdn.vn/prupload/156/2017/12/img20171211150727637.jpg"
     },
@@ -319,44 +373,45 @@ const Body = () => {
     }
   };
 
+ 
+
   return (
     <section className="body">
         <div className="salonIntroduction" >
             <div style={{display:'flex',flexDirection:'column', alignItems:'flex-end'}}>
-                <Carousel className='carousel'autoplay arrows>
-                <Image
-                src='https://images.alphacoders.com/132/1322096.png'
-                className = 'image'
+                <Carousel
+                    responsive={responsiveForIntroCarousel}
+                    showDots={true}
+                    infinite={true} // Enable infinite loop
+                    autoplay={true} // Enable autoplay
+                    autoplaySpeed={3000} // Duration of autoplay (in milliseconds)
+                    arrows={true} // Show navigation arrows
+                    className='carousel'
                 >
-                    </Image>
-
                     <Image
-                src='https://images4.alphacoders.com/134/1344806.png'
-                className = 'image'
-                >
-                    </Image>
-                    
+                        src='https://images.alphacoders.com/132/1322096.png'
+                        className='image'
+                    />
                     <Image
-                src='https://wallpapers.com/images/hd/acrylic-nails-7ti8qcrl75w2g248.jpg'
-                className = 'image'
-                >
-                    </Image>
+                        src='https://images4.alphacoders.com/134/1344806.png'
+                        className='image'
+                    />
                     <Image
-                src='https://www.letseatcake.com/wp-content/uploads/2021/03/spring-nails-12.jpg'
-                className = 'image'
-                >
-                    </Image>
+                        src='https://wallpapers.com/images/hd/acrylic-nails-7ti8qcrl75w2g248.jpg'
+                        className='image'
+                    />
                     <Image
-                src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2Tp7GY7RyU83ZOVd_sXyk1GXCR9tP8pKTDevnXhdKysQi_PIIxqTbN9DRNV3-A2zD77NfZ9UPvW5exVCOURydFvydTCtqmTd808kK31pUp1YiwBK965k5iOQuPLo981a1KQfr9adgdjU/s1600/IMG_5675.JPG'
-                className = 'image'
-                >
-                    </Image>
+                        src='https://www.letseatcake.com/wp-content/uploads/2021/03/spring-nails-12.jpg'
+                        className='image'
+                    />
                     <Image
-                src='https://glownailbar.com/wp-content/uploads/2023/09/Untitled-design-27.jpg'
-                className = 'image'
-                >
-                    </Image>
-                    
+                        src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2Tp7GY7RyU83ZOVd_sXyk1GXCR9tP8pKTDevnXhdKysQi_PIIxqTbN9DRNV3-A2zD77NfZ9UPvW5exVCOURydFvydTCtqmTd808kK31pUp1YiwBK965k5iOQuPLo981a1KQfr9adgdjU/s1600/IMG_5675.JPG'
+                        className='image'
+                    />
+                    <Image
+                        src='https://glownailbar.com/wp-content/uploads/2023/09/Untitled-design-27.jpg'
+                        className='image'
+                    />
                 </Carousel>
 
                 <button
@@ -375,18 +430,18 @@ const Body = () => {
              <div className="salonInfo"> 
                 <h1 className='title' style={{color: "black"}}> Holiday Nails & Spa</h1>
                 <div className="rate">
-                    <text style={{fontWeight:600}}> {rateValue}</text>
+                    <span style={{fontWeight:600}}> {rateValue}</span>
                     <Rate disabled allowHalf defaultValue={rateValue}/>
-                    <text style={{color:'purple'}}> ({totalRate}) </text>
+                    <span style={{color:'purple'}}> ({totalRate}) </span>
                 </div>
                 <div className="contact" style={{cursor:'pointer'}}>
                     <FiPhoneCall/>
-                    <text> (613) 793 2803</text>
+                    <span> (613) 793 2803</span>
                     
                 </div>
                 <div className="location" style={{cursor:'pointer'}}>
                     <FaLocationDot/>
-                    <text> 5949 Jeanne D'Arc BlvdS, Orleans, Ottawa, ON K1C2N1</text>
+                    <span> 5949 Jeanne D'Arc BlvdS, Orleans, Ottawa, ON K1C2N1</span>
                 </div>
 
                 <button className='btn'> 
@@ -395,8 +450,8 @@ const Body = () => {
                 </button>
 
                 <div className="icon">
-                    <CiHeart style={{color: "red"}}/>
-                    <FaShare style={{color: "black"}}/>
+                    <SlLike />
+                    <IoMdShare />
                 </div>
                 {/*
                 <button className='btn2'>
@@ -408,7 +463,7 @@ const Body = () => {
                 <div className="hour">
                     {/*<h1 className='title' style={{color: "black"}}> Hours</h1>*/}
 
-                    <Collapse expandIconPosition="right">
+                    <Collapse expandIconPosition="end">
 
                         <Collapse.Panel className='operationStatus'
                         header={
@@ -439,10 +494,10 @@ const Body = () => {
                         >
                             {hoursOfOperation.map(({ day, hours }, index) => (
                                 <div key={day} className='timeList'>
-                                    <text className='timeBox' style={{ fontWeight: currentDayIndex === index ? 'bold' : 'normal' }}>
-                                        <text className='dayText'> {day}: </text>
-                                        <text className='hoursText'> {hours} </text>
-                                    </text>
+                                    <span className='timeBox' style={{ fontWeight: currentDayIndex === index ? 'bold' : 'normal' }}>
+                                        <span className='dayspan'> {day}: </span>
+                                        <span className='hoursspan'> {hours} </span>
+                                    </span>
                                 </div>
                             ))}
                         </Collapse.Panel>
@@ -467,11 +522,11 @@ const Body = () => {
                 <Tag color= 'green' className='tag'> Waxing </Tag>
 
             </Flex>
-            <text className='content'>
+            <span className='content'>
             Welcome to Holiday Nail & Spa, your premier destination for top-notch beauty and relaxation services in the heart of Ottawa, Ontario. Nestled at 1000 Gerrard St E, our dedicated team is here to pamper you with an array of indulgent treatments designed to enhance your natural beauty and provide you with a rejuvenating experience. At Nails For You, we specialize in a wide range of services, including manicures, pedicures, shellac applications, acrylics, bio/UV gel nails, eyelash extensions, soothing massages, and expert waxing services.
             We take pride in offering a tranquil and inviting atmosphere where you can escape the hustle and bustle of daily life and immerse yourself in a world of self-care and beauty enhancement. Come join us and let us help you look and feel your absolute best. Your journey to relaxation and revitalization starts here at Nails For You.
             To make your experience with us even more convenient, we provide online booking through FastBiz Booking. Simply visit our website and schedule your appointment at your convenience.
-            </text>
+            </span>
         </div>
 
         <div className="salonServices">
@@ -481,7 +536,7 @@ const Body = () => {
                 <div className="categories">
                     {serviceCategories.map((category, index) => (
                         <div key={index} className={`category ${activeCategory === index ? 'active' : ''}`} onClick={() => handleCategoryClick(index)}>
-                            <text>{category.title}</text>
+                            <span>{category.title}</span>
                         </div>
                     ))}
                 </div>
@@ -536,17 +591,17 @@ const Body = () => {
                                             {/* Nếu dịch vụ có giảm giá */}
                                             {service.isDiscounted ? (
                                                 <div className='discounted'>
-                                                    <text className='new'>{service.discountPrice}</text>
-                                                    <text className='orignal'>
+                                                    <span className='new'>{service.discountPrice}</span>
+                                                    <span className='orignal'>
                                                         {service.price}
-                                                    </text>
+                                                    </span>
                                                 </div>
                                             ) : (
                                                 <div className='normal'>
-                                                    <text className='orignal'>{service.price}</text>
-                                                    <text className='type'>
+                                                    <span className='orignal'>{service.price}</span>
+                                                    <span className='type'>
                                                         {service.isFixedPrice ? '' : '+'}
-                                                    </text>
+                                                    </span>
                                                 </div>
                                             )}
                                         </h3>
@@ -568,60 +623,70 @@ const Body = () => {
 
 
         <div className="salonStaff">
-            <h1 className='title'> Staffs </h1>;
+            <h1 className='title'> Staffs </h1>
             
            
-            <div className="staffContainer">
-                {staffMembers.map((staff, index) => (
-                    <div key={index} className="staffItem">
+            <Carousel 
+                responsive={responsiveForStaffCarousel} 
+                infinite={true} 
+                arrows={true}
+                autoPlaySpeed={3000}
+                showDots={true}
+                autoPlay={true}
+                className='staffContainer'
+                >
+                {staffMembers.map((staff) => (
+                    <div key={staff.name} className="staffItem">
+                     
+                    <img src={staff.image} alt={staff.name} className="staffImage" />
+                    <div style={{display: "flex"}}>
+                        <Rate disabled defaultValue={staff.rating} />
+                        <span> ({staff.rating})</span>
+                    </div> 
+                    <h3 className='name'>{staff.name}</h3>
 
-                        <div style={{display:'flex', alignItems:'center', gap:'20px'}}>
-
-                            <img src={staff.image} alt={staff.name} className="staffImage" />
-                            <div  style={{display:'flex', flexDirection:'column'}}>
-                                <h3 className='name'>{staff.name}</h3>
-                                <div style={{display:'flex', alignItems:'center', gap:'5px'}}>
-                                    <Rate disabled defaultValue={staff.rating} />
-                                    <text> ({staff.rating})</text>
-                                </div>
-                            </div>
-                        </div>   
-                        <p className='introduction'>"{staff.introduction}"</p>
-
-            <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <button className='btn'> Book Now </button>
-            </div>
+                              
+                       
+                    <p className='position'>{staff.position}</p>
+                        
+                    <button className='btn3'>Book Now</button>
+                        
                     </div>
                 ))}
-            </div>
+            </Carousel>
+
         </div>
 
         <div className="customerReview">
             <h1 className='title'> Reviews </h1>
             <Rate disabled defaultValue={rateValue} />
-
             <div className='rateValue'>
-                <text> {rateValue} </text>
-                <text className='evaluates'> ({totalRate}) </text>
+                <span> {rateValue} </span>
+                <span className='evaluates'> ({totalRate}) </span>
             </div>
-
-            {reviews.map((review, index) => (
-                <div key={index} className="reviewItem">
-
-                    <div style={{display:'flex', alignItems: 'center', gap:'10px'}}>
-                        <img src={review.avatar} alt={review.name} className="avatar" />
-                        <div> 
-                            <h4 className="customerName">{review.name}</h4>
-                            <p className="reviewDate">{review.date}</p>
+            <Carousel
+                responsive={responsiveForReviewCarousel}
+                infinite={true}
+                autoPlay={true}
+                autoPlaySpeed={3000}
+                showDots={true}
+                className='reviewsContainer'
+            >
+                {reviews.map((review, index) => (
+                    <div key={index} className="reviewItem">
+                        <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                            <img src={review.avatar} alt={review.name} className="avatar" />
+                            <div>
+                                <h4 className="customerName">{review.name}</h4>
+                                <p className="reviewDate">{review.date}</p>
+                            </div>
                         </div>
-                    </div>
-
                         <Rate disabled defaultValue={review.rating} />
-                        <p className="reviewText">{review.review}</p>
-                </div>
-            ))}
-
-            <button className='btn' style={{marginBottom:'50px'}}> See more </button>
+                        <p className="reviewspan">{review.review}</p>
+                    </div>
+                ))}
+            </Carousel>
+            
         </div>
 
         <div className="gallery" ref={galleryRef}>
