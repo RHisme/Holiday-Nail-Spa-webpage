@@ -1,0 +1,37 @@
+[
+    {
+        "name": "John Doe",
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMDGGxnaZ5oCLmiT6Fps0LL15z2R1tPcSivg&s",
+        "rating": 5,
+        "review": "Great service! Highly recommend!",
+        "date": "2024-09-25"
+    },
+    {
+        "name": "Anna Smith",
+        "avatar": "https://m.yodycdn.com/blog/anh-dai-dien-hai-yodyvn3-b3a8cf32-e08a-47fc-a741-71626aadc4de.jpg",
+        "rating": 4,
+        "review": "Very satisfied with my experience!",
+        "date": "2024-09-24"
+    },
+    {
+        "name": "Carlos Garcia",
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMpyxWRq0NREvwUVGSJ9NkDmIc8C1R-dc57Q&s",
+        "rating": 5,
+        "review": "Best salon I've ever visited!",
+        "date": "2024-09-23"
+    },
+    {
+        "name": "Maria Lopez",
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT99hEiDGWLpnid1kGLmnOs8RMuyaitDLM2GA&s",
+        "rating": 4,
+        "review": "Lovely atmosphere and friendly staff.",
+        "date": "2024-09-22"
+    },
+    {
+        "name": "Liam O'Connor",
+        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-IxweiKWIdzzPmlSvhK5M30yGbBsxPsFbRA&s",
+        "rating": 5,
+        "review": "An amazing experience from start to finish!",
+        "date": "2024-09-21"
+    }
+]

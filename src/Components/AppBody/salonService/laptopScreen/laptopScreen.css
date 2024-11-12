@@ -1,0 +1,147 @@
+@charset "UTF-8";
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --ThirdColor: hsl(189, 73%, 93%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 225);
+}
+
+.laptopSalonServices {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  max-width: 100em;
+  width: 100%;
+  border-bottom: 0.6px solid var(--greyText);
+}
+.laptopSalonServices .title {
+  font-size: 2rem;
+}
+.laptopSalonServices .servicesContainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+.laptopSalonServices .servicesContainer .categories {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.laptopSalonServices .servicesContainer .categories .category {
+  max-width: 24rem;
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  padding: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  border-bottom: 10px solid var(white);
+}
+.laptopSalonServices .servicesContainer .categories .category:hover {
+  background-color: var(--inputColor);
+}
+.laptopSalonServices .servicesContainer .categories .category.active {
+  background-color: var(--ThirdColor);
+  border-right: 7px solid var(--SecondaryColor);
+}
+.laptopSalonServices .servicesContainer .serviceList {
+  flex: 2;
+}
+.laptopSalonServices .servicesContainer .serviceList .servicesGrid {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+  gap: 10px;
+}
+.laptopSalonServices .servicesContainer .serviceList .servicesGrid .serviceItem {
+  display: flex;
+  flex-direction: column;
+  max-width: 60em;
+  background-color: white;
+  color: var(--SecondaryColor);
+  border: 1px solid var(--greyText);
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.laptopSalonServices .servicesContainer .serviceList .servicesGrid .serviceItem .serviceTitle .duration {
+  font-weight: 500;
+}
+.laptopSalonServices .servicesContainer .serviceList .servicesGrid .serviceItem .price {
+  display: flex;
+  justify-content: start;
+  color: black;
+  font-weight: 700;
+}
+.laptopSalonServices .servicesContainer .serviceList .servicesGrid .serviceItem .price .discounted {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.laptopSalonServices .servicesContainer .serviceList .servicesGrid .serviceItem .price .discounted .new {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--ThirdColor);
+  color: red;
+  border-radius: 15px;
+  width: 3rem;
+  height: 2.3rem;
+}
+.laptopSalonServices .servicesContainer .serviceList .servicesGrid .serviceItem .price .discounted .orignal {
+  text-decoration: line-through;
+}
+.laptopSalonServices .servicesContainer .serviceList .servicesGrid .serviceItem .price .normal {
+  display: flex;
+  align-items: center;
+  background-color: var(--ThirdColor);
+  padding: 5px;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.laptopSalonServices .servicesContainer .serviceList .servicesGrid .serviceItem .descriptionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  margin-top: 10px;
+  color: var(--greyText);
+}
+.laptopSalonServices .servicesContainer .serviceList .servicesGrid .serviceItem .descriptionContent .description {
+  display: -webkit-box;
+  line-clamp: 2; /* Giới hạn hiển thị 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.laptopSalonServices .servicesContainer .serviceList .servicesGrid .serviceItem .descriptionContent .fullDescription {
+  display: block; /* show full content */
+}
+.laptopSalonServices .servicesContainer .serviceList .servicesGrid .serviceItem:hover {
+  background-color: var(--inputColor);
+}
+
+@media (max-width: 768px) {
+  .laptopSalonServices {
+    display: none;
+  }
+}/*# sourceMappingURL=laptopScreen.css.map */

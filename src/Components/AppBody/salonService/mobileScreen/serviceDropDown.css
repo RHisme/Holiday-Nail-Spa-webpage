@@ -1,0 +1,98 @@
+@charset "UTF-8";
+:root {
+  --PrimaryColor: hsl(199, 100%, 33%);
+  --SecondaryColor: hsl(187, 85%, 43%);
+  --ThirdColor: hsl(189, 73%, 93%);
+  --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+  --whiteColor: hsl(0,0%,100%);
+  --blackColor: hsl(201, 33%, 16%);
+  --textColor: hsl(240, 4%, 36%);
+  --whiteColorDeam: hsl(0, 0%, 93%);
+  --greyText: rgb(190, 190, 190);
+  --inputColor: rgb(239, 239, 239);
+  --bodyColor: rgb(240, 240, 246);
+  --cardBG: rgb(225, 225, 225);
+}
+
+.servicesDropdown {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  width: 100%;
+}
+.servicesDropdown .categories {
+  margin-top: 10px;
+}
+.servicesDropdown .categories .categoryTitle {
+  color: var(--SecondaryColor);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.servicesDropdown .categories .categoryTitle .serviceItem {
+  display: flex;
+  flex-direction: column;
+  max-width: 60em;
+  background-color: white;
+  color: var(--SecondaryColor);
+  border: 1px solid var(--greyText);
+  padding: 15px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 20px;
+}
+.servicesDropdown .categories .categoryTitle .serviceItem .serviceTitle .duration {
+  font-weight: 500;
+}
+.servicesDropdown .categories .categoryTitle .serviceItem .price {
+  display: flex;
+  justify-content: start;
+  color: black;
+  font-weight: 700;
+}
+.servicesDropdown .categories .categoryTitle .serviceItem .price .discounted {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.servicesDropdown .categories .categoryTitle .serviceItem .price .discounted .new {
+  display: flex;
+  justify-content: center;
+  background-color: var(--ThirdColor);
+  color: red;
+  width: 30px;
+  padding: 5px;
+  border-radius: 15px;
+  width: 3rem;
+}
+.servicesDropdown .categories .categoryTitle .serviceItem .price .discounted .orignal {
+  text-decoration: line-through;
+}
+.servicesDropdown .categories .categoryTitle .serviceItem .price .normal {
+  display: flex;
+  align-items: center;
+  background-color: var(--ThirdColor);
+  padding: 5px;
+  border-radius: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.servicesDropdown .categories .categoryTitle .serviceItem .descriptionContent {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: relative;
+  margin-top: 10px;
+  color: var(--greyText);
+}
+.servicesDropdown .categories .categoryTitle .serviceItem .descriptionContent .description {
+  display: -webkit-box;
+  line-clamp: 2; /* Giới hạn hiển thị 2 dòng */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.servicesDropdown .categories .categoryTitle .serviceItem .descriptionContent .fullDescription {
+  display: block; /* show full content */
+}/*# sourceMappingURL=serviceDropDown.css.map */

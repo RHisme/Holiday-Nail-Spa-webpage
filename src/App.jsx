@@ -5,7 +5,7 @@ import { Flex, Layout } from 'antd';
 const { Header, Footer, Content } = Layout;
 
 import NavBar from './Components/NavBar/navbar';
-import Body from './Components/AppBody/body';
+import Body from './Components/AppBody//mainBody/body';
 
 const App = () => {
   

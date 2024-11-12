@@ -1,0 +1,182 @@
+:root {
+    --PrimaryColor: hsl(199, 100%, 33%); 
+    --SecondaryColor: hsl(187, 85%, 43%); 
+    --ThirdColor: hsl(189, 73%, 93%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%)); 
+    --whiteColor: hsl(0,0%,100%); 
+    --blackColor: hsl(201, 33%, 16%); 
+    --textColor: hsl(240, 4%, 36%); 
+    --whiteColorDeam: hsl(0, 0%, 93%); 
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246); 
+    --cardBG: rgb(225, 225, 225);
+}
+
+.salonIntroduction{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%; 
+    max-width: 100em;
+    border-bottom: 0.6px solid var(--greyText);
+    gap: 5em;
+    position: relative;
+
+    .carousel{
+        height: 35rem; /* Set height for the carousel */
+        max-width: 60em; /* Set width for the carousel */
+        overflow: hidden; /* Hide overflow */
+        text-align: center; /* Center text inside */
+        background-color: transparent; /* Ensure background is transparent */
+        border-radius: 12px; /* Round corners */
+            
+        
+        .image{
+            width: 100%; 
+            object-fit: cover;
+            height: 35rem; 
+            border-radius: 12px;
+        }
+
+    }
+    .react-multiple-carousel__arrow {
+        position:absolute;
+        z-index: 10 !important;
+
+    }
+    
+
+    .salonInfo{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: var(--SecondaryColor);
+        font-size: 1rem;
+        z-index: 1;
+        min-width: 30;
+        position: relative;
+
+        .title{
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+
+        .rate{
+            display: flex;
+            align-items:center;
+            justify-content: space-between;
+            gap: 5px;
+
+            .icon{
+                display: flex;
+                justify-content: space-between;
+                gap: 5px;
+                font-size: 1.5rem;
+                color: black;
+                
+            }
+
+
+        }
+
+        .contact{
+            display: flex;
+            cursor: pointer;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .location{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+        }
+
+    
+    }
+
+    .hour{
+        position: relative;
+        z-index: 1;
+        transition: all 0.3s ease-in-out;
+        height: 5vh;
+        margin: 0;
+        padding: 0;
+        border: none;
+
+        .operationStatus{ 
+            position: absolute;
+            width: 100%;
+            border-radius: 16px !important;
+            border: 2px solid var(--greyText) !important;
+            background-color: whitesmoke;
+            left: 0;
+            padding: 0;
+            margin: 0;
+            
+
+
+          
+            .timeContainer{
+                box-sizing: border-box;
+                border-radius: 16px;
+                .timeList{
+                    .timeBox{
+                        display:flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        padding: 10px;
+                        font-weight: 400;
+                        font-size: 1rem;;
+                        
+                        
+                        
+                    }
+    
+                }
+            }
+            }
+
+        
+    }
+    
+    .aboutUs{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        z-index: 0;
+        color: black;
+
+        
+        .descriptionContent{
+            text-align: justify !important;
+            line-height: 1.5;
+
+
+
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px){
+    .salonIntroduction {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0;
+
+
+        .carousel, .salonInfo {
+            width: 100%; /* Ensures full width on smaller screens */
+        }
+    
+        .salonInfo {
+            .aboutUs{
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+}

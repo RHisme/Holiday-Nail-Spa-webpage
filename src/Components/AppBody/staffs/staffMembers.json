@@ -1,0 +1,26 @@
+[
+    {
+        "name": "RoyHoang",
+        "position": "Nail Technician",
+        "rating": 4.8,
+        "image": "https://htmediagroup.vn/wp-content/uploads/2022/04/Anh-CV-2_avatar-min.jpg"
+    },
+    {
+        "name": "John Smith",
+        "position": "Acrylic Specialist",
+        "rating": 4.6,
+        "image": "https://htmediagroup.vn/wp-content/uploads/2022/11/Anh-giam-doc-nam-01-min.jpg"
+    },
+    {
+        "name": "Emily Johnson",
+        "position": "Pedicure Specialist",
+        "rating": 4.9,
+        "image": "https://channel.mediacdn.vn/prupload/156/2017/12/img20171211150727637.jpg"
+    },
+    {
+        "name": "David Ngo",
+        "position": "Pedicure Specialist",
+        "rating": 4.5,
+        "image": "https://img.freepik.com/free-photo/young-male-posing-isolated-against-blank-studio-wall_273609-12356.jpg"
+    }
+]
