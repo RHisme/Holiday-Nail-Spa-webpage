@@ -1,6 +1,6 @@
-import React, {useState, useRef} from "react";
+import React, {useState} from "react";
 import "./salonIntroduction.css";
-import {Rate, Collapse, Image, Flex, Tag} from "antd";
+import {Rate, Collapse, Image, Flex, Tag, Carousel} from "antd";
 
 import { FiPhoneCall } from "react-icons/fi";
 import { FaLocationDot } from "react-icons/fa6";
@@ -9,23 +9,11 @@ import { ClockCircleOutlined } from '@ant-design/icons';
 import { SlLike } from "react-icons/sl";
 import { IoMdShare } from "react-icons/io";
 
-import Carousel from 'react-multi-carousel';
-import 'react-multi-carousel/lib/styles.css'; // Import styles for React Multi Carousel
 
-const responsiveForIntroCarousel = {
-    superLarge: {
-        breakpoint: { max: 4000, min: 1024 },
-        items: 1, // Show 1 item for large screens
-    },
-    large: {
-        breakpoint: { max: 1024, min: 464 },
-        items: 1, // Show 1 item for medium screens
-    },
-    medium: {
-        breakpoint: { max: 464, min: 0 },
-        items: 1, // Show 1 item for small screens
-    },
-};
+import imageData from './images.json';
+
+
+
 
 const hoursOfOperation = [
     { day: 'Sunday', hours: '11am - 6pm' },
@@ -51,15 +39,9 @@ const SalonIntroduction = () => {
     const isOpenNow = true; // Check if the business is open now
     const currentDayIndex = new Date().getDay(); // Get the current day's index
 
-     // Create a ref for the gallery section
-    const galleryRef = useRef(null);
 
-    // Scroll smoothly to the gallery section
-    const navigateToGallery = () => {
-        if (galleryRef.current) {
-        galleryRef.current.scrollIntoView({ behavior: 'smooth' }); // Scroll smoothly to the gallery section
-        }
-    };
+
+   
 
     const salonDescription = "Holiday Nail & Spa is a luxurious and festive destination where you can relax, unwind, and treat yourself to a perfect holiday experience. Whether you're preparing for a special holiday event or simply indulging in a bit of self-care, their skilled technicians create stunning holiday-inspired designs, featuring festive colors, glitter, and unique seasonal accents. At Holiday Nail & Spa, every visit is a celebration of beauty, relaxation, and the holiday spirit.";
     //Toggle service description content
@@ -68,49 +50,32 @@ const SalonIntroduction = () => {
      const toggleDescription = () => {
       setIsExpanded(prevState => !prevState);
      }
+     
 
     return(
         
         <div className="salonIntroduction" >
             <div style={{display:'flex',flexDirection:'column', alignItems:'flex-end'}}>
-                <Carousel
-                    responsive={responsiveForIntroCarousel}
-                    autoPlay={true}
-                    infinite={true}
-                    showDots={true}
-                    autoPlaySpeed={3000} // Duration of autoplay (in milliseconds)
-                    arrows={true} // Show navigation arrows
+                <Carousel 
+                    autoplay
+                    arrows
+                    infinite
+                    autoplaySpeed={1800}
                     className='carousel'
+                    
                 >
-                    <Image
-                        src='https://images.alphacoders.com/132/1322096.png'
-                        className='image'
-                    />
-                    <Image
-                        src='https://images4.alphacoders.com/134/1344806.png'
-                        className='image'
-                    />
-                    <Image
-                        src='https://wallpapers.com/images/hd/acrylic-nails-7ti8qcrl75w2g248.jpg'
-                        className='image'
-                    />
-                    <Image
-                        src='https://www.letseatcake.com/wp-content/uploads/2021/03/spring-nails-12.jpg'
-                        className='image'
-                    />
-                    <Image
-                        src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2Tp7GY7RyU83ZOVd_sXyk1GXCR9tP8pKTDevnXhdKysQi_PIIxqTbN9DRNV3-A2zD77NfZ9UPvW5exVCOURydFvydTCtqmTd808kK31pUp1YiwBK965k5iOQuPLo981a1KQfr9adgdjU/s1600/IMG_5675.JPG'
-                        className='image'
-                    />
-                    <Image
-                        src='https://glownailbar.com/wp-content/uploads/2023/09/Untitled-design-27.jpg'
-                        className='image'
-                    />
+                    {imageData.map((image, index) => (
+                        <Image
+                            key={index}
+                            src={image.src}
+                            alt={image.alt}
+                            className='image'
+                        />
+                    ))}
                 </Carousel>
 
                 <button
                 className='btn4'
-                onClick={navigateToGallery}
                 style={{
                    width:'10rem',
                    marginTop: '10px',

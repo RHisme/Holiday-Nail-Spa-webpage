@@ -21,15 +21,14 @@
   max-width: 100em;
   border-bottom: 0.6px solid var(--greyText);
   gap: 5em;
-  position: relative;
 }
 .salonIntroduction .carousel {
   height: 35rem; /* Set height for the carousel */
-  max-width: 60em; /* Set width for the carousel */
-  overflow: hidden; /* Hide overflow */
+  width: 60em; /* Set width for the carousel */
   text-align: center; /* Center text inside */
   background-color: transparent; /* Ensure background is transparent */
   border-radius: 12px; /* Round corners */
+  overflow: hidden;
 }
 .salonIntroduction .carousel .image {
   width: 100%;
@@ -127,10 +126,28 @@
 @media screen and (max-width: 768px) {
   .salonIntroduction {
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     gap: 0;
+    overflow: hidden;
+    max-width: 40em;
   }
-  .salonIntroduction .carousel, .salonIntroduction .salonInfo {
+  .salonIntroduction .carousel {
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+    width: 85vw;
+    margin: 0;
+    padding: 0;
+  }
+  .salonIntroduction .carousel .image {
+    display: block;
+    width: 100%;
+    height: 35vh;
+    -o-object-fit: fill;
+       object-fit: fill;
+    border-radius: 12px !important;
+  }
+  .salonIntroduction .salonInfo {
     width: 100%; /* Ensures full width on smaller screens */
   }
   .salonIntroduction .salonInfo .aboutUs {
