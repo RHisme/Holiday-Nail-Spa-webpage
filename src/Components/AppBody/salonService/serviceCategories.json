@@ -20,13 +20,13 @@
                 "description": "Good products + long lasting ~3-4 weeks"
             },
             {
-                "name": "Add Manual Design (French, Flowers, Tickers, Diamond, Any Else From Internet,...)",
-                "price": "$10",
+                "name": "Add Manual Design (French, Flowers, Diamond, Designs From Internet,...)",
+                "price": "from $10",
                 "discountPrice": "$0",
                 "isDiscounted": false,
                 "isFixedPrice": true,
                 "duration": "14 mins",
-                "description": " note : plus from +10$ and up depend on patters on pictures "
+                "description": " Feel free to show us your creative design and we will make it become true"
             },
             {
                 "name": "Refill Ombré/Solar/Gel-X",
