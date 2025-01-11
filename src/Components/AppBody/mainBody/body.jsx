@@ -7,6 +7,7 @@ import Staffs from '../staffs/staffs';
 import CustomersReview from '../customerReviews/review';
 import SalonGallery from '../salonGallery/gallery';
 import ServicesDropdown from '../salonService/mobileScreen/serviceDropDown';
+import FloatingButton from '../FloatingButton/FloatingButton';
 
 
 const Body = () => {
@@ -34,6 +35,7 @@ const Body = () => {
         <Staffs/>
         <CustomersReview/>
         <SalonGallery ref={galleryRef}/>    
+        <FloatingButton/>
     </section>
   )
 }

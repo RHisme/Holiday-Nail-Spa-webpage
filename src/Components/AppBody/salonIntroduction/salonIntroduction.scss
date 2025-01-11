@@ -21,6 +21,7 @@
     max-width: 100em;
     border-bottom: 0.6px solid var(--greyText);
     gap: 5em;
+    overflow: visible !important;
 
     .carousel{
         height: 35rem; /* Set height for the carousel */
@@ -105,7 +106,7 @@
         margin: 0;
         padding: 0;
         border: none;
-        overflow: visible;; 
+        overflow: visible;
 
         .operationStatus{ 
             position: absolute;
@@ -133,6 +134,7 @@
                         padding: 10px;
                         font-weight: 400;
                         font-size: 1rem;;
+                        z-index: 1000;
                         
                         
                         

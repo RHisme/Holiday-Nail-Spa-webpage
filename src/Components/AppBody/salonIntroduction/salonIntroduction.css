@@ -21,6 +21,7 @@
   max-width: 100em;
   border-bottom: 0.6px solid var(--greyText);
   gap: 5em;
+  overflow: visible !important;
 }
 .salonIntroduction .carousel {
   height: 35rem; /* Set height for the carousel */
@@ -113,6 +114,7 @@
   padding: 10px;
   font-weight: 400;
   font-size: 1rem;
+  z-index: 1000;
 }
 .salonIntroduction .aboutUs {
   display: flex;
