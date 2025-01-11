@@ -66,6 +66,7 @@
             align-items:center;
             justify-content: space-between;
             gap: 5px;
+            cursor: pointer;
 
             .icon{
                 display: flex;
@@ -89,7 +90,7 @@
         .location{
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 10px;
 
         }
 

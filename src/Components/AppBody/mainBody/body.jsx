@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect, useState, useRef} from 'react';
 import './body.css';
 
 import SalonIntroduction from '../salonIntroduction/salonIntroduction';
@@ -11,7 +11,7 @@ import ServicesDropdown from '../salonService/mobileScreen/serviceDropDown';
 
 const Body = () => {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Check screen size on initial render
-
+  const galleryRef = useRef(null);
   useEffect(() => {
     // Update the state whenever the screen size changes
     const handleResize = () => {
@@ -29,11 +29,11 @@ const Body = () => {
 
   return (
     <section className="body">
-        <SalonIntroduction/>
+        <SalonIntroduction galleryRef={galleryRef}/>
         {isMobile ? <ServicesDropdown /> : <LaptopSalonService />}
         <Staffs/>
         <CustomersReview/>
-        <SalonGallery/>    
+        <SalonGallery ref={galleryRef}/>    
     </section>
   )
 }

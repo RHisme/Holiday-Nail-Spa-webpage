@@ -1,26 +1,20 @@
 [
     {
-        "name": "RoyHoang",
-        "position": "Nail Technician",
-        "rating": 4.8,
-        "image": "https://htmediagroup.vn/wp-content/uploads/2022/04/Anh-CV-2_avatar-min.jpg"
-    },
-    {
-        "name": "John Smith",
+        "name": "Kevin Pham",
         "position": "Acrylic Specialist",
+        "rating": 4.8,
+        "image": "https://scontent-yyz1-1.xx.fbcdn.net/v/t1.6435-9/70336109_10217528441655468_2797325020362178560_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=mGO11uzFgCgQ7kNvgHYRR7c&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=ADuOPdMOdz_uSaXkZuO8mlg&oh=00_AYCr5SK6UHSRBrPgdeoZyRoDLliOPeiK6yesWsMVAE7GAg&oe=67A5A80D"
+    },
+    {
+        "name": "Nathalie",
+        "position": "Design Specialist",
+        "rating": 4.8,
+        "image": "https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/472208382_10226053320472402_8615948896085654563_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=KzgEZVidZ-wQ7kNvgF9IA6B&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=AB9vL2QnYNiDbnCzhPZNf7Q&oh=00_AYC8564zSngnYXoJunGHRlRkadkKYPNmeo3jYVTHzn9Duw&oe=6783F6C8"
+    },
+    {
+        "name": "Emily Nguyen",
+        "position": "Nail Technician",
         "rating": 4.6,
-        "image": "https://htmediagroup.vn/wp-content/uploads/2022/11/Anh-giam-doc-nam-01-min.jpg"
-    },
-    {
-        "name": "Emily Johnson",
-        "position": "Pedicure Specialist",
-        "rating": 4.9,
-        "image": "https://channel.mediacdn.vn/prupload/156/2017/12/img20171211150727637.jpg"
-    },
-    {
-        "name": "David Ngo",
-        "position": "Pedicure Specialist",
-        "rating": 4.5,
-        "image": "https://img.freepik.com/free-photo/young-male-posing-isolated-against-blank-studio-wall_273609-12356.jpg"
+        "image": "https://scontent-yyz1-1.xx.fbcdn.net/v/t39.30808-6/472753979_8880787278636515_2283111733035771730_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_ohc=qu-SST0bvvsQ7kNvgECyjrK&_nc_zt=23&_nc_ht=scontent-yyz1-1.xx&_nc_gid=AuXF6P9_Vrl3t5P8Zx7STOk&oh=00_AYAhgCLvOQm4JxtcKb2ZeQnJuD_g6bee9iKVaJ5d6l6j4A&oe=67840BFA"
     }
 ]
