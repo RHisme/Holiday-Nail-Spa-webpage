@@ -88,6 +88,7 @@
   margin: 0;
   padding: 0;
   border: none;
+  overflow: visible;
 }
 .salonIntroduction .hour .operationStatus {
   position: absolute;
@@ -102,6 +103,7 @@
 .salonIntroduction .hour .operationStatus .timeContainer {
   box-sizing: border-box;
   border-radius: 16px;
+  z-index: 1000;
 }
 .salonIntroduction .hour .operationStatus .timeContainer .timeList .timeBox {
   display: flex;
