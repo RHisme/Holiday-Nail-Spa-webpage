@@ -81,7 +81,10 @@ const ServicesDropdown = () => {
                                             )}
                                         </h3>
 
-                                        <button className='btn3'> Book Now </button>
+                                        <button 
+                                        className='btn3'
+                                        onClick={() => {window.open("https://bellebooking.com/center/f53e86ffa62566d36515daa4f07ba6d2?hl=en-CA&gei=UD2DZ67TOfD-ptQPzY2kyAo&rwg_token=AJKvS9VUqDYwA-mOhuwnRN5YTCV_svDLS0MckRALQ0oeXKyBp8lEfNzwksfYQslEIClGKR9Wujv1TSaXvbSh90hVgExHgO2zWA%3D%3D")}}
+                                        > Book Now </button>
                                     </div>
                                     </div>
                                 ))}

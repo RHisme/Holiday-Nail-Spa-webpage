@@ -4,7 +4,7 @@ import reviews from "./customerReviews.json";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css'; // Import styles for React Multi Carousel
 import {Rate} from "antd";
-
+import "./review.css"
 
 const responsiveForReviewCarousel = {
     superLarge: {
