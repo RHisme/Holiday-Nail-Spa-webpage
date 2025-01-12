@@ -31,8 +31,8 @@ const getCurrentDayInfo = () => {
 
 
 const SalonIntroduction = ({ galleryRef }) => {
-    var rateValue = 4.5; 
-    var totalRate = 322;
+    var rateValue = 4.6; 
+    var totalRate = 305;
     const currentDayInfo = getCurrentDayInfo(); // Get current day's hours
     const currentDayIndex = new Date().getDay(); // Get the current day's index
 
@@ -104,7 +104,7 @@ const SalonIntroduction = ({ galleryRef }) => {
                 </div>
                 <div className="contact" style={{cursor:'pointer'}} onClick={() => {window.location.href = "tel:+16134244289"}} >
                     <FiPhoneCall/>
-                    <span > (613) 793 2803</span>
+                    <span > (613) 424-4289 </span>
                     
                 </div>
                 <div className="location" style={{cursor:'pointer'}} onClick={()=> {window.open("https://www.google.com/maps/place/Holiday+Nails+%26+Spa/@45.4654283,-75.5805588,14z/data=!4m15!1m7!3m6!1s0x4cce1196685058c7:0x11f437bbc82a1330!2sHoliday+Nails+%26+Spa!8m2!3d45.4654283!4d-75.54245!16s%2Fg%2F1tgz06hk!3m6!1s0x4cce1196685058c7:0x11f437bbc82a1330!8m2!3d45.4654283!4d-75.54245!15sChBIb2xpZGF5IGRheSBuYWlsWhIiEGhvbGlkYXkgZGF5IG5haWySAQpuYWlsX3NhbG9umgEkQ2hkRFNVaE5NRzluUzBWSlEwRm5TVU50ZUdOMU1uaFJSUkFC4AEA-gEECGkQGA!16s%2Fg%2F1tgz06hk?entry=ttu&g_ep=EgoyMDI1MDEwMi4wIKXMDSoASAFQAw%3D%3D")}}>

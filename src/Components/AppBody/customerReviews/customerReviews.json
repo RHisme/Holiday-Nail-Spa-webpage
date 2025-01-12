@@ -1,37 +1,45 @@
 [
     {
-        "name": "John Doe",
-        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMDGGxnaZ5oCLmiT6Fps0LL15z2R1tPcSivg&s",
+        "name": "Andreea Moisa",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJbtS32T8t5a4ioyVl8mS52QiCLFhPAIQfYH7qGlkNQ5uX07bo=w60-h60-p-rp-mo-br100",
         "rating": 5,
-        "review": "Great service! Highly recommend!",
-        "date": "2024-09-25"
+        "review": "Best nail salon! Haven't gone anywhere else in years. They always pay close attention to details and my nails are exactly what I imagined or better. ",
+        "date": "2024-10-25"
     },
     {
-        "name": "Anna Smith",
-        "avatar": "https://m.yodycdn.com/blog/anh-dai-dien-hai-yodyvn3-b3a8cf32-e08a-47fc-a741-71626aadc4de.jpg",
-        "rating": 4,
-        "review": "Very satisfied with my experience!",
+        "name": "Brianna Barry",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocKAgKEcQRuCc4FvLjXXHMc4Up2cnTnAO1iycAeXkReEo8P6EQ=w60-h60-p-rp-mo-br100",
+        "rating": 5,
+        "review": "Great nail studio! Love Ann. She does great nails and she is so gentle. I'd highly recommend them!",
         "date": "2024-09-24"
     },
     {
-        "name": "Carlos Garcia",
-        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMpyxWRq0NREvwUVGSJ9NkDmIc8C1R-dc57Q&s",
+        "name": "Elsa Ford",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjXESSrkhk7Si826sfCkyewLkzYkCEQ5caT-NxgrqSCum0eXRDao=w60-h60-p-rp-mo-br100",
         "rating": 5,
-        "review": "Best salon I've ever visited!",
-        "date": "2024-09-23"
+        "review": "I’ve only got acrylics here, i love how long they spend on shaping, my nails always come out perfect.",
+        "date": "2024-09-19"
     },
     {
-        "name": "Maria Lopez",
-        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT99hEiDGWLpnid1kGLmnOs8RMuyaitDLM2GA&s",
-        "rating": 4,
-        "review": "Lovely atmosphere and friendly staff.",
-        "date": "2024-09-22"
+        "name": "Barbara Mentusf",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjVZrbECRoklL1ZrAUyzJNQFv3sMTuP25oKKOlbjJF1S4oYa3eI=w60-h60-p-rp-mo-br100",
+        "rating": 5,
+        "review": "Great service.  Clean salon. Calm atmosphere.  I will definitely return.",
+        "date": "2024-09-12"
     },
     {
-        "name": "Liam O'Connor",
-        "avatar": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-IxweiKWIdzzPmlSvhK5M30yGbBsxPsFbRA&s",
+        "name": "Kathleen Harper",
+        "avatar": "https://lh3.googleusercontent.com/a-/ALV-UjUWP-N-v1B1YkcZZoR_V3MbBA8yYIFU8ik5PcoOPQbDG-O3Yl2_qg=w60-h60-p-rp-mo-br100",
         "rating": 5,
-        "review": "An amazing experience from start to finish!",
-        "date": "2024-09-21"
+        "review": "My daughter and I had a nice time here. Friendly and courteous staff.",
+        "date": "2024-07-12"
+    },
+    {
+        "name": "Elisabeth Fox",
+        "avatar": "https://lh3.googleusercontent.com/a/ACg8ocIIR5fCsbb2MMahxjPHhwrhfQ23mDjg6ioAvFou_LJMMYTPwg=w60-h60-p-rp-mo-br100",
+        "rating": 5,
+        "review": "Natalie is very talented!",
+        "date": "2024-03-20"
     }
+    
 ]

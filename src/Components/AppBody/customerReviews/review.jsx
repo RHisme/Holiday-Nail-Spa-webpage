@@ -22,8 +22,8 @@ const responsiveForReviewCarousel = {
 };
 
 const CustomersReview = () => {
-    var rateValue = 4.5; 
-    var totalRate = 322;
+    var rateValue = 4.6; 
+    var totalRate = 305;
     
     return(
         <div className="customerReview">
